@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct AddToBagAnimationApp: App {
+    
+    @StateObject var homeData = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.light)
+                .environmentObject(homeData)
         }
     }
 }
